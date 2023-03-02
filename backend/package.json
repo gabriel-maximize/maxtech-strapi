@@ -9,11 +9,9 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
     "@strapi/plugin-i18n": "4.7.0",
     "@strapi/plugin-users-permissions": "4.7.0",
-    "@strapi/provider-email-sendgrid": "^4.7.0",
     "@strapi/strapi": "4.7.0",
     "mysql": "2.18.1"
   },
