@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parceiros",
+  "info": {
+    "singularName": "parceiro",
+    "pluralName": "parceiros",
+    "displayName": "Parceiros"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "thumb": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}
