@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "redes_sociais",
+  "info": {
+    "singularName": "rede-social",
+    "pluralName": "redes-sociais",
+    "displayName": "Redes sociais",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Twitter": {
+      "type": "string"
+    },
+    "Instagram": {
+      "type": "string"
+    },
+    "Youtube": {
+      "type": "string"
+    },
+    "Facebook": {
+      "type": "string"
+    }
+  }
+}
