@@ -4,7 +4,8 @@
   "info": {
     "singularName": "servico",
     "pluralName": "servicos",
-    "displayName": "Serviços"
+    "displayName": "Serviços",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,15 +17,12 @@
       "required": true
     },
     "thumb": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
       "type": "media",
       "multiple": true,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

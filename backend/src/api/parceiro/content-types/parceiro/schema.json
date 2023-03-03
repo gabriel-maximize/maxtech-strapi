@@ -4,7 +4,8 @@
   "info": {
     "singularName": "parceiro",
     "pluralName": "parceiros",
-    "displayName": "Parceiros"
+    "displayName": "Parceiros",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,15 +17,12 @@
       "required": true
     },
     "thumb": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
       "type": "media",
       "multiple": true,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
