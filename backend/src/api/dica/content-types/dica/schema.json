@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dicas",
+  "info": {
+    "singularName": "dica",
+    "pluralName": "dicas",
+    "displayName": "Dicas"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "descricao": {
+      "type": "text",
+      "required": true
+    },
+    "thumb": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}
