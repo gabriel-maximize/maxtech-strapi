@@ -4,7 +4,7 @@ export default {
 
     try {
       await strapi.plugins["email"].services.email.send({
-        to: "manutencao@homolog.mx",
+        to: "gabriel.melo@maximize.art.br",
         from: "manutencao@homolog.mx",
         subject: "Hello world",
         text: "Hello world",
