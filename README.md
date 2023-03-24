@@ -1,2 +1,1 @@
-# Maxtech - Strapi
-> Teste de framework
+# Maxtec Institucional
