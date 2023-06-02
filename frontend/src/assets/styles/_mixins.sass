@@ -1,0 +1,71 @@
+@use "sass:color"
+
+=bg($image: 'sprite.png', $left: center, $top: center, $color: transparent, $repeat: no-repeat)
+  background: $color url('/img/#{$image}') $repeat $left $top
+
+=bgi($image: 'sprite.png')
+  background-image: url('/img/#{$image}')
+
+=center($w, $h, $y: 0, $x: 0)
+  position: absolute
+  top: 50%
+  left: 50%
+  width: $w
+  height: $h
+  margin-top: ($h / -2) + $y
+  margin-left: ($w / -2) + $x
+
+// =centerx(x = 0, pos = absolute)
+//     position pos
+//     left 50%
+//     margin-left (@width / -2) + x
+
+// =centery(y = 0)
+//     position absolute
+//     top 50%
+//     margin-top (@height / -2) + y
+
+=opacity($n)
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$n * 100})
+  -khtml-opacity: $n
+  -moz-opacity: $n
+  opacity: $n
+
+=increaseclickarea()
+  display: inline-flex
+  justify-content: center
+  align-items: center
+
+  &:after
+    content: ''
+    position: absolute
+    width: 120%
+    min-width: 45px
+    min-height: 45px
+    z-index: 1
+
+=replace($image: 'sprite.png', $left: 0, $top: 0, $color: transparent)
+  display: block
+  border: 0
+  background: $color url('/img/#{$image}') no-repeat $left $top
+  text-indent: -9999px
+  overflow: hidden
+
+=size($width: 5px, $height: 5px)
+  width: $width
+  height: $height
+
+=square($size: 5px)
+  +size($size, $size)
+
+=color-pallete($name, $color)
+  --#{$name}-50:  color.adjust($color, $lightness: 50%)
+  --#{$name}-100: color.adjust($color, $lightness: 50%)
+  --#{$name}-200: color.adjust($color, $lightness: 50%)
+  --#{$name}-300: color.adjust($color, $lightness: 50%)
+  --#{$name}-400: color.adjust($color, $lightness: 50%)
+  --#{$name}-500: #{$color}
+  --#{$name}-600: color.adjust($color, $lightness: 50%)
+  --#{$name}-700: color.adjust($color, $lightness: 50%)
+  --#{$name}-800: color.adjust($color, $lightness: 50%)
+  --#{$name}-900: color.adjust($color, $lightness: 50%)

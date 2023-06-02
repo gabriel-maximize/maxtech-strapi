@@ -1,0 +1,62 @@
+// .nav
+
+.nav__list
+    display: flex
+    
+// .nav__item
+
+.nav__link
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    padding: 10px 30px
+    font-size: 14px
+    font-weight: 600
+    color: $branco
+    text-transform: uppercase
+    text-decoration: none
+    transition: all 150ms ease
+    
+.nav__link:hover
+    color: $cor-primaria
+    background: $branco
+
+.nav__menu
+    display: none
+
+.nav__close
+    position: absolute
+    pointer-events: none
+    opacity: 0
+    transition: all .15s ease
+    z-index: -1
+
+.nav__contato.button,
+.nav__colaborador.button
+    height: 60px
+    border-radius: 0
+    border: none
+
+.nav__contato.button
+    width: 200px
+    background-image: $degrade
+    
+.nav__colaborador.button:hover,
+.nav__contato.button:hover
+    color: $cor-secundaria
+    background: $branco
+
+.nav__colaborador.button
+    width: 180px
+    color: $branco
+    text-align: left
+    font-size: 11px
+    background-color: $cinza-800
+
+.nav__colaborador.button:before
+    content: ''
+    +square(28px)
+    min-width: 28px
+    margin-right: 5px
+    +replace('user.svg')

@@ -1,0 +1,31 @@
+.header
+    position: absolute
+    z-index: 100
+    top: 0
+    left: 0
+    width: 100%
+    padding-top: var(--header-height)
+
+.header__bar
+    position: fixed
+    top: 0
+    left: 0
+    display: inline-flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    height: var(--header-height)
+    padding-left: 3%
+    background: $azul
+
+.header__social.social
+    justify-content: flex-start
+
+.header__nav
+    .nav__wrap
+        display: flex
+
+.header__logo.logo
+    +size(200px,59px)
+    margin-top: 40px
+    +bgi('logo-mono.svg')

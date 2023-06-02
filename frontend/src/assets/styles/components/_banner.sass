@@ -1,0 +1,54 @@
+.banner
+    position: relative
+
+.banner__container
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    flex-direction: column
+    min-height: 700px
+    height: 100vh
+    padding: var(--header-height) 0 0
+    color: $branco
+
+.banner__media
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.banner__media:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    +square(100%)
+    background: rgba(0, 36, 64, .6)
+
+.banner__img
+    display: block
+    object-fit: cover
+    width: 100%
+    height: 100%
+
+.banner__title.title
+    margin-bottom: .5em
+    color: $branco
+    font-size: 80px
+    font-weight: normal
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+
+    strong
+        display: block
+        font-weight: bold
+
+.banner__description
+    max-width: 600px
+    line-height: 1.8
+    font-size: 24px
+
+.banner__action
+    margin-top: 4em

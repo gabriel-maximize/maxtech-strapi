@@ -1,0 +1,125 @@
+$facebook: #3b5999
+$twitter: #55acee
+$linkedin: #0077B5
+$whatsapp: #25D366
+$telegram: #0088cc
+$email: #db4437
+$hover-darkness: 20%
+
+.share
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    border-top: 1px solid $cinza-200
+    padding-top: 10px
+    margin-top: 50px
+
+.share__label
+    display: block
+    margin-right: 10px
+    font-size: 16px
+
+.share__list
+    display: flex
+    list-style: none
+    align-items: center
+    margin: 0 !important
+
+.share__link
+    display: flex
+    align-items: center
+    justify-content: center
+    text-decoration: none
+    color: $branco
+    width: 32px
+    height: 32px
+    margin-right: 5px
+    font-size: 0
+    transition: background-color 200ms ease
+
+    &:after
+        content: ''
+        display: block
+        width: 20px
+        height: 20px
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+        text-indent: -9999px
+        overflow: hidden
+
+    &:last-child
+        margin-right: 0
+    
+    &:hover
+        background-color: $cor-secundaria
+
+        &:after
+            filter: brightness(0) invert(1)
+
+    &--facebook
+        // background-color: $facebook
+
+        &:after
+           +bgi('icon-facebook3.svg')
+
+        // &:hover
+            // background-color: darken($facebook, $hover-darkness)
+
+    &--twitter
+        // background-color: $twitter
+
+        &:after
+            +bgi('icon-twitter.svg')
+
+        // &:hover
+            // background-color: darken($twitter, $hover-darkness)
+
+    &--linkedin
+        // background-color: $linkedin
+
+        &:after
+            +bgi('icon-linkedin.svg')
+
+        // &:hover
+            // background-color: darken($linkedin, $hover-darkness)
+
+    &--whatsapp
+        // background-color: $whatsapp
+
+        &:after
+            +bgi('icon-whatsapp.svg')
+
+        // &:hover
+            // background-color: darken($whatsapp, $hover-darkness)
+
+    &--email
+        // background-color: $email
+
+        &:after
+            +bgi('icon-email.svg')
+
+        // &:hover
+            // background-color: darken($email, $hover-darkness)
+
+    &--telegram
+        // background-color: $telegram
+
+        // &:after
+        //     +bgi('icon-telegram.svg')
+
+        // &:hover
+            // background-color: darken($telegram, $hover-darkness)
+
+// @media mobile-large
+//     .share
+//         flex-wrap: wrap
+
+//     .share__title
+//         display: block
+//         width: 100%
+//         margin-right: 0
+//         margin-bottom: 10px
+
+//     .share__link
+//         margin-right: 4px

@@ -1,0 +1,53 @@
+// Media Queries
+$default-screen: 1919px
+
+$desktop-large-screen: 1679px
+$desktop-medium-screen: 1439px
+$desktop-small-screen: 1366px
+
+$tablet-large-screen: 1279px
+$tablet-medium-screen: 1023px
+$tablet-small-screen: 767px
+
+$mobile-large-screen: 639px
+$mobile-medium-screen: 479px
+$mobile-small-screen: 374px
+
+
+@mixin desktop-large
+    @media (max-width: #{desktop-large-screen})
+        @content 
+
+@mixin desktop-medium
+    @media (max-width: #{desktop-medium-screen})
+        @content 
+
+@mixin desktop-small
+    @media (max-width: #{desktop-small-screen})
+        @content 
+        
+
+@mixin tablet-large
+    @media (max-width: #{tablet-large-screen})
+        @content 
+
+@mixin tablet-medium
+    @media (max-width: #{tablet-medium-screen})
+        @content 
+
+@mixin tablet-small
+    @media (max-width: #{tablet-small-screen})
+        @content 
+
+
+@mixin mobile-large
+    @media (max-width: #{mobile-large-screen})
+        @content 
+
+@mixin mobile-medium
+    @media (max-width: #{mobile-medium-screen})
+        @content 
+
+@mixin mobile-small
+    @media (max-width: #{mobile-small-screen})
+        @content 

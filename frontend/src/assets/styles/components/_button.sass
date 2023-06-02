@@ -1,0 +1,71 @@
+.button
+    display: inline-flex
+    min-height: 45px
+    min-width: 180px
+    align-items: center
+    justify-content: center
+    padding: 0 30px
+    margin: 0
+    border-radius: 6px
+    border: 1px solid $cor-primaria
+    box-sizing: border-box
+    color: $branco
+    font-size: 14px
+    font-weight: 600
+    text-align: center
+    text-transform: uppercase
+    text-decoration: none
+    letter-spacing: 0
+    cursor: pointer
+    background-color: $cor-primaria
+    transition: all 150ms ease
+
+.button:hover
+    color: $branco
+    border-color: $cor-secundaria
+    background-color: $cor-secundaria
+
+.button--alt
+    @extend .button
+    color: $branco
+    border-color: $cor-primaria
+    background-color: $cor-primaria
+
+.button--outline-alt
+    @extend .button
+    color: $branco
+    border-color: $branco
+    background-color: transparent
+
+    &:hover
+        color: $cor-secundaria
+        background-color: $branco
+
+.button--outline
+    @extend .button
+    color: $cor-primaria
+    border-color: $cor-primaria
+    background-color: transparent
+
+    &:hover
+        color: $branco
+        border-color: $cor-secundaria
+        background-color: $cor-secundaria
+
+.button--loading
+    background: $cor-secundaria
+    border-color: $cor-secundaria
+    pointer-events: none
+    color: $cor-secundaria
+
+    &:before
+        opacity: 1
+
+@keyframes loading
+    0%
+        -webkit-transform: rotate(0deg)
+        transform: rotate(0deg)
+
+    100% 
+        -webkit-transform: rotate(360deg)
+        transform: rotate(360deg)

@@ -1,0 +1,70 @@
+.pagination
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 50px
+
+.pagination__list
+    display: flex
+    align-items: center
+    justify-content: center
+
+.pagination__item
+    margin: 0 5px
+
+.pagination__link
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 30px
+    height: 30px
+    padding: 5px
+    box-sizing: border-box
+    border-radius: 30px
+    font-size: 14px
+    font-weight: 600
+    color: $cor-primaria
+    text-decoration: none
+
+    &:hover
+        color: $branco
+        background-color: $cor-secundaria
+
+    &--current
+        color: $preto
+        cursor: default
+        pointer-events: none
+
+.pagination__action
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 30px
+    height: 30px
+    border-radius: 30px
+    border: 1px solid $cor-primaria
+    background-color: transparent
+
+    span
+        display: none
+
+    &:before
+        content: ''
+        width: 8px
+        height: 12px
+        +replace('icon-arrow-left.svg')
+
+.pagination__action:hover
+    border-color: $cor-secundaria
+    background-color: $cor-secundaria
+
+    &:before
+        filter: brightness(0) invert(1)
+
+.pagination__action--next:before
+    transform: rotate(-180deg)
+
+.pagination__action--disabled
+    opacity: 0.5
+    pointer-events: none
+
