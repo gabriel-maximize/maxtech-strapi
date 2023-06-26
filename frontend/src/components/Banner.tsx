@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export function Banner(){
+export function Banner() {
     return (
         <div className="banner">
             <div className="container banner__container">
@@ -17,4 +17,3 @@ export function Banner(){
     );
 }
 
-export default Banner;

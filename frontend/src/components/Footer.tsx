@@ -1,15 +1,15 @@
-import Logo from './Logo';
-import Social from './Social';
+import { Logo } from './Logo';
+import { Social } from './Social';
 import { Nav } from './Nav';
 
-export function Footer({year, className}) {
+export function Footer() {
     return (
-        <footer className={`footer ${className}`}>
+        <footer className={`footer`}>
             <div className="container footer__container">
-                <Logo Component="span" className="footer__logo">Maxtec</Logo>
-                <Nav className="footer__nav" />
+                <Logo />
+                <Nav />
                 <div className="footer__institucional">
-                    <Social className="footer__social" />
+                    <Social />
                     <div className="footer__contato">
                         <span className="footer__label">Fale conosco</span>
                         <ul className="footer__list">
@@ -22,7 +22,7 @@ export function Footer({year, className}) {
                         <address>Av. Holandeses, n1 - Ed. Biadenne, ap 404 - Ponta do Farol - São Luís - MA</address>
                     </div>
                     <span className="footer__copyright">
-                        © {year} Maxtec - Mais ambiental todos os dias. <br/>
+                        © {new Date().getFullYear()} Maxtec - Mais ambiental todos os dias. <br/>
                         Todos os direitos reservados.
                     </span>
                 </div>
@@ -30,9 +30,3 @@ export function Footer({year, className}) {
         </footer>
     );
 }
-
-Footer.defaultProps = {
-    year: new Date().getFullYear(),
-}
-
-export default Footer;
