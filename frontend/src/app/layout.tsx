@@ -1,10 +1,10 @@
 import '@/styles/init.sass'
 
 import { ReactNode } from "react";
+import { Metadata } from 'next';
 
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
-import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Maxtec - Mais ambiental todos os dias",
