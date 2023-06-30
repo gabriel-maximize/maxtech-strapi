@@ -2,8 +2,11 @@
 
 .nav__list
     display: flex
-    
-// .nav__item
+    align-items: center
+    padding-right: $spacing-md
+
+    li
+        height: var(--header-height)
 
 .nav__link
     display: flex
@@ -17,6 +20,9 @@
     text-transform: uppercase
     text-decoration: none
     transition: all 150ms ease
+
+    &:focus-visible
+      outline: none 
     
 .nav__link:hover
     color: $cor-primaria
@@ -72,3 +78,16 @@
     min-width: 28px
     margin-right: 5px
     +replace('user.svg')
+
+.nav__search
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0 20px
+    height: var(--header-height)
+    color: $branco
+
+    &:hover
+        cursor: pointer
+        color: $cor-primaria
+        background-color: $branco
