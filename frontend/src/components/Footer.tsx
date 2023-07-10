@@ -1,13 +1,38 @@
 import { Social } from './Social'
 import { Nav } from './Nav'
+import Image from 'next/image'
+import { links } from '@/utils/data/links'
+import Link from 'next/link'
 
 export function Footer() {
   return (
     <footer className={`footer`}>
       <div className="container footer__container">
-        <Nav />
-        <div className="footer__institucional">
+        <div className="footer__info">
+          <Image
+            src="/img/logo.svg"
+            alt="Logo colorida Maxtec"
+            width={122}
+            height={122}
+          />
           <Social />
+        </div>
+        <div>
+          <ul className="footer__list">
+            {links.map((link) => (
+              <li key={link.text} className="footer__item">
+                <Link
+                  className="footer__link"
+                  href={link.to}
+                  target={link.target || '_self'}
+                >
+                  {link.text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="footer__institucional">
           <div className="footer__contato">
             <span className="footer__label">Fale conosco</span>
             <ul className="footer__list">
