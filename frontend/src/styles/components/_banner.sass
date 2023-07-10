@@ -1,54 +1,94 @@
 .banner
-    position: relative
+  position: relative
+  overflow: hidden
 
 .banner__container
-    display: flex
-    justify-content: center
-    align-items: flex-start
-    flex-direction: column
-    min-height: 700px
-    height: 100vh
-    padding: var(--header-height) 0 0
-    color: $branco
+  display: flex
+  justify-content: center
+  align-items: flex-start
+  flex-direction: column
+  min-height: 700px
+  height: 100vh
+  padding: var(--header-height) 0 0
+  color: $branco
 
 .banner__media
-    position: absolute
-    z-index: -1
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
+  position: absolute
+  z-index: -1
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
 
 .banner__media:after
-    content: ''
-    position: absolute
-    top: 0
-    left: 0
-    display: block
-    +square(100%)
-    background: rgba(0, 36, 64, .6)
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  display: block
+  +square(100%)
+  background: rgba(0, 36, 64, .6)
 
 .banner__img
-    display: block
-    object-fit: cover
-    width: 100%
-    height: 100%
+  display: block
+  object-fit: cover
+  width: 100%
+  height: 100%
 
 .banner__title.title
-    margin-bottom: .5em
-    color: $branco
-    font-size: 80px
-    font-weight: normal
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+  margin-bottom: .5em
+  color: $branco
+  font-size: 80px
+  font-weight: normal
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
 
-    strong
-        display: block
-        font-weight: bold
+  strong
+      display: block
+      font-weight: bold
 
 .banner__description
-    max-width: 600px
-    line-height: 1.8
-    font-size: 24px
+  max-width: 600px
+  line-height: 1.8
+  font-size: 24px
 
 .banner__action
-    margin-top: 4em
+  margin-top: 4em
+
+.banner__list
+  position: absolute
+  bottom: 0
+  right: -10px
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+
+.banner__card
+  text-decoration: none
+  padding: ($spacing-md + $spacing-sm)
+  width: 370px
+  height: 140px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: $radius-lg $radius-lg 0 0
+  background-color: transparent
+
+.banner__card--primary
+  background: linear-gradient(135deg, #96CC43 0%, #1497D5 100%)
+
+.banner__card--ghost
+  background-color: $branco
+
+  .banner__link--ghost
+    color: $cor-secundaria
+
+.banner__content
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: $spacing-sm
+
+.banner__link
+  font-size: ($font-h5 + 4)
+  color: $branco
+
