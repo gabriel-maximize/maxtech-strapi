@@ -15,16 +15,24 @@ export const links: HeadersItens[] = [
     to: '/',
   },
   {
-    text: 'Serviço',
+    text: 'Serviços',
     to: '',
     subitems: [
       {
-        text: 'Limpeza hospitalar',
-        to: '/item-1',
+        text: 'Higienização',
+        to: '/higienizacao',
       },
       {
-        text: 'Limpeza de material cortante',
-        to: '/item-2',
+        text: 'Limpeza predial',
+        to: '/limpeza-predial',
+      },
+      {
+        text: 'Coleta de resíduos',
+        to: '/coleta-residuos',
+      },
+      {
+        text: 'CTR Centro de tratamento de resíduos',
+        to: '/tratamento-residuos',
       },
     ],
   },

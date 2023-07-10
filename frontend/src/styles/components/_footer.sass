@@ -4,9 +4,8 @@
   background-color: $azul-800
 
 .footer__container
-  display: flex
-  justify-content: space-between
-  align-items: flex-start
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
 
 .footer__info
   position: relative
@@ -14,7 +13,46 @@
 .footer__list
   list-style: none
 
+.footer__list--destaque
+  list-style: unset
+
 .footer__link
   text-decoration: none
   font-size: $font-sm
   color: $branco
+
+.footer__label
+  display: block
+  margin-bottom: $spacing-sm
+  font-size: $font-sm
+  color: $azul-light
+
+.footer__item
+  font-size: $font-sm
+  font-weight: $font-bold
+  color: $branco
+
+.footer__telefone,
+.footer__address
+  all: unset
+  font-weight: $font-light
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  gap: $spacing-xs
+
+.footer__address
+  align-items: flex-start
+
+.footer__list
+  display: flex
+  flex-direction: column
+  gap: $spacing-sm
+
+.footer__endereco
+  color: $branco
+
+  address
+    max-width: 212px
+    font-weight: $font-thin
+    line-height: $font-spacing-sm

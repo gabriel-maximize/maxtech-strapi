@@ -17,7 +17,7 @@ export function Footer() {
           />
           <Social />
         </div>
-        <div>
+        <div className="footer__nav">
           <ul className="footer__list">
             {links.map((link) => (
               <li key={link.text} className="footer__item">
@@ -32,29 +32,56 @@ export function Footer() {
             ))}
           </ul>
         </div>
-        <div className="footer__institucional">
-          <div className="footer__contato">
-            <span className="footer__label">Fale conosco</span>
-            <ul className="footer__list">
-              <li className="footer__item">
-                <span className="footer__telefone">98 91345-6789</span>
+        <div className="footer__submenu">
+          <span className="footer__label">{links[1].text}</span>
+          <ul className="footer__list footer__list--destaque">
+            {links[1].subitems?.map((subitem) => (
+              <li key={subitem.text} className="footer__item">
+                {subitem.text}
               </li>
-              <li className="footer__item">
-                <span className="footer__telefone">98 3042-1034</span>
-              </li>
-            </ul>
-          </div>
-          <div className="footer__endereco">
-            <span className="footer__label">Visite-nos</span>
+            ))}
+          </ul>
+        </div>
+        <div className="footer__contato">
+          <span className="footer__label">Fale conosco</span>
+          <ul className="footer__list">
+            <li className="footer__item">
+              <a href="tel:+5598913456789" className="footer__telefone">
+                <Image
+                  src="/img/whatsapp.svg"
+                  alt="Logo do whatsapp"
+                  width={18}
+                  height={19}
+                />
+                98 <strong>91345-6789</strong>
+              </a>
+            </li>
+            <li className="footer__item">
+              <a href="tel:+559830421034" className="footer__telefone">
+                <Image
+                  src="/img/telefone.svg"
+                  alt="Logo de um telefone"
+                  width={19}
+                  height={19}
+                />
+                98 <strong>3042-1034</strong>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="footer__endereco">
+          <span className="footer__label">Visite-nos</span>
+          <span className="footer__address">
+            <Image
+              src="/img/pin.svg"
+              alt="Logo de um pin de mapa"
+              width={17}
+              height={24}
+            />
             <address>
               Av. Holandeses, n1 - Ed. Biadenne, ap 404 - Ponta do Farol - São
               Luís - MA
             </address>
-          </div>
-          <span className="footer__copyright">
-            © {new Date().getFullYear()} Maxtec - Mais ambiental todos os dias.{' '}
-            <br />
-            Todos os direitos reservados.
           </span>
         </div>
       </div>
