@@ -6,6 +6,13 @@ export function Banner() {
   return (
     <div className="banner">
       <div className="container banner__container">
+        <Image
+          src="/img/logo-mono.svg"
+          alt="Logo da maxtec branca"
+          className="banner__logo"
+          width={200}
+          height={60}
+        />
         <h2 className="banner__title title">
           Somos uma empresa <strong>voltada para o futuro.</strong>
         </h2>
