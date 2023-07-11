@@ -1,5 +1,4 @@
 import Link from 'next/link'
-
 export interface ICardProps {
   variant?: 'min' | 'details'
   thumb: string

@@ -1,6 +1,9 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import NextLink from 'next/link'
+
 import { ReactNode } from 'react'
+
+import { Link } from './Link'
 
 export function Banner() {
   return (
@@ -20,9 +23,7 @@ export function Banner() {
           Nunc posuere purus magna, volutpat tristique ante tempor vel.
           Phasellus posuere pellentesque arcu
         </div>
-        <Link href="/" className="button banner__action">
-          Fale conosco
-        </Link>
+        <Link href="/">Fale conosco</Link>
       </div>
       <div className="banner__media">
         <Image
@@ -58,7 +59,7 @@ interface ICardProps {
 function Card({ variant = 'primary', to, children }: ICardProps) {
   return (
     <li>
-      <Link href={to} className={`banner__card banner__card--${variant}`}>
+      <NextLink href={to} className={`banner__card banner__card--${variant}`}>
         <div className="banner__content">
           <span className={`banner__link banner__link--${variant}`}>
             {children}
@@ -70,7 +71,7 @@ function Card({ variant = 'primary', to, children }: ICardProps) {
             height={41}
           />
         </div>
-      </Link>
+      </NextLink>
     </li>
   )
 }

@@ -1,4 +1,14 @@
+'use client'
+
+import 'swiper/scss'
+import 'swiper/scss/navigation'
+import 'swiper/scss/pagination'
+
+import { Navigation, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
 import { Card, ICardProps } from '../Card'
+import { Link } from '../Link'
 
 export function Servicos() {
   const cards: Omit<ICardProps, 'variant'>[] = [
@@ -22,6 +32,11 @@ export function Servicos() {
       title: '(CTR) Centro de Tratamento de resíduos',
       link: '#',
     },
+    {
+      thumb: 'https://random.imagecdn.app/400/300',
+      title: '(CTR) Centro de Tratamento de resíduos',
+      link: '#',
+    },
   ]
 
   return (
@@ -30,21 +45,30 @@ export function Servicos() {
         <h2 className="servicos__title">
           Nossos <strong>serviços</strong>
         </h2>
-        <h3 className="servicos__subtitle">
-          Para cada necessidade, montamos um plano estratégico de atuação com um
-          único objetivo, solucionar problemas e minimizar possíveis danos à
-          marca dos nossos clientes.
-        </h3>
+        <div className="servicos__header">
+          <h3 className="servicos__subtitle">
+            Para cada necessidade, montamos um plano estratégico de atuação com
+            um único objetivo, solucionar problemas e minimizar possíveis danos
+            à marca dos nossos clientes.
+          </h3>
+          <Link href="#">Todos os serviços</Link>
+        </div>
       </div>
 
       <div className="servicos__content">
-        <ul className="servicos__list">
+        <Swiper
+          className="servicos__list"
+          modules={[Navigation, Pagination]}
+          navigation
+          spaceBetween={30}
+          slidesPerView={4}
+        >
           {cards.map((card) => (
-            <li key={card.title} className="servicos__item">
+            <SwiperSlide key={card.title} className="servicos__item">
               <Card thumb={card.thumb} title={card.title} link={card.link} />
-            </li>
+            </SwiperSlide>
           ))}
-        </ul>
+        </Swiper>
       </div>
     </section>
   )
