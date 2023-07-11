@@ -1,0 +1,39 @@
+.card
+  position: relative
+  text-decoration: none
+  display: block
+  width: 100%
+  max-width: 400px
+  min-height: 400px
+  border-radius: $radius-xl $radius-xl 0 $radius-xl
+  background-color: $branco
+  box-shadow: 0px 0px 55px 0px rgba(0, 0, 0, 0.20)
+
+  &:before
+    content: url("/img/triangulo-lateral.svg")
+    position: absolute
+    bottom: -4px
+    right: 0
+
+.card__thumb
+  width: 100%
+  background-position: center
+  object-fit: cover
+  border-radius: $radius-xl $radius-xl 0 0
+
+.card__info
+  width: 100%
+  padding: 3rem 3rem 1rem 3rem 
+
+.card__title
+  font-size: $font-h5
+  color: $verde-400
+
+.card__action
+  position: absolute
+  bottom: 15px
+  right: 30px
+  font-size: $font-xs
+  font-weight: $font-light
+  text-transform: uppercase
+  color: #B3B3B3

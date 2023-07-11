@@ -1,0 +1,62 @@
+.servicos
+  overflow: hidden
+  margin: $spacing-4xl 0
+
+.servicos__title
+  max-width: 200px
+  font-size: $font-h3
+  font-weight: $font-regular
+  text-transform: uppercase
+  color: $cor-secundaria
+
+.servicos__header
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.servicos__subtitle
+  max-width: 725px
+  margin: $spacing-md 0
+  font-size: $font-lg
+  font-weight: $font-thin
+  line-height: $font-spacing-sm
+  color: $cinza
+
+.servicos__content
+  width: 100%
+  padding-left: 17%
+
+.servicos__list
+  overflow: visible !important
+  margin-top: $spacing-sm
+  margin-bottom: $spacing-xl
+
+.swiper-button-next,
+.swiper-button-prev
+  top: unset !important
+  bottom: -80px !important
+  left: 0 !important
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 45px !important
+  height: 45px !important
+  border-radius: $radius-full
+  border: 2px solid $verde-500
+
+  &:before
+    content: url("/img/arrow-left.svg")
+    display: block
+    position: absolute
+    top: 12px
+
+  &:after
+    display: none
+
+.swiper-button-next
+  left: 60px !important
+
+  &:before
+    transform: rotate(180deg)
+    top: 8px
